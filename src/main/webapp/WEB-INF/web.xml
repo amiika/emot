@@ -1,0 +1,38 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>Shorten</servlet-name>
+  	<display-name>Shorten</display-name>
+  	<description></description>
+  	<servlet-class>Shorten</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Redirect</servlet-name>
+  	<display-name>Redirect</display-name>
+  	<description></description>
+  	<servlet-class>Redirect</servlet-class>
+  	 <load-on-startup>-1</load-on-startup>
+  </servlet>
+  <servlet>
+  	<servlet-name>Info</servlet-name>
+  	<display-name>Info</display-name>
+  	<description></description>
+  	<servlet-class>Info</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Shorten</servlet-name>
+  	<url-pattern>/Shorten</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Redirect</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Info</servlet-name>
+  	<url-pattern>/Info</url-pattern>
+  </servlet-mapping>
+</web-app>
