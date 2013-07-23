@@ -126,8 +126,8 @@ This link makes me:
  </div>
  
  <div class="sm">
- <input class="emoticon" name="emot" type="image" value="Suprised" id="Suprised" src="img/Surprised.svg"  alt="Suprised" />
- <label for="Suprised">Suprised</label>
+ <input class="emoticon" name="emot" type="image" value="Surprised" id="Surprised" src="img/Surprised.svg"  alt="Suprised" />
+ <label for="Surprised">Surprised</label>
  </div>
  
  <div class="sm">

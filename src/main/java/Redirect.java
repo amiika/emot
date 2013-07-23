@@ -29,7 +29,6 @@ import com.hp.hpl.jena.query.ResultSet;
 public class Redirect extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public static Logger logger = Logger.getLogger(Redirect.class);
-	public static final String endpoint = "http://localhost:3030/emot/sparql";
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -96,7 +95,7 @@ public class Redirect extends HttpServlet {
 			return;
 		}
 			
-		String[] longUrl = Utils.getEmotUrl(urlId);
+		String[] longUrl = EmotUtils.getEmotUrl(urlId);
 		
 		if(longUrl[0]!=null) {
 			String emotion = longUrl[1].substring(longUrl[1].lastIndexOf("#")+1);
@@ -108,6 +107,8 @@ public class Redirect extends HttpServlet {
 			out.println("<h2>Redirecting to "+longUrl[0]+" ...</h2>");
 			out.println("</body>");
 			out.println("</html>");
+			
+			EmotUtils.createVisit(request.getRemoteAddr(),urlId);
 			
 			/* Redirect after 1 second delay */
 			response.setHeader("Refresh", "1; URL="+longUrl[0]);
