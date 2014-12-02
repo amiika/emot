@@ -1,16 +1,12 @@
 package emot.utils;
-import java.math.BigInteger;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-
-import org.apache.commons.codec.binary.Hex;
+import org.apache.commons.codec.binary.Base64;
 
 
 public class Users {
 	
 public static String createID(String ip) {
 	try {
-	return SimpleCrypto.encrypt(ip);
+		return new String(Base64.encodeBase64(ip.getBytes()));
 	} catch(Exception ex) {
 		return null;
 	}
